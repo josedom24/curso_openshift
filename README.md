@@ -20,7 +20,8 @@
 6. minishift: Instalación local de Openshift
 7. Recursos que nos ofrece Openshift
 8. Ejemplo 1: Despliegue de una página HTML estática en OpenShift
-9. Ejemplo 2: Despliegue de aplicaciones PHP en OpenShift
-10. Ejemplo 3: Despliegue de aplicaciones Python en OpenShift
-11. Ejemplo 4: Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente
+9. Introducción a la utilidad de línea de comandos oc
+10. Ejemplo 2: Despliegue de aplicaciones PHP en OpenShift
+11. Ejemplo 3: Despliegue de aplicaciones Python en OpenShift
+12. Ejemplo 4: Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente
 
