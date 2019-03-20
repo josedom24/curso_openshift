@@ -4,11 +4,14 @@
 
 1. [Introducción a PaaS](curso/u01)
 
-## Bloque 2: Contenedores
+## Bloque 2: Contenedores. Docker
 
 2. [Desplegando nuestras aplicaciones en contenedores](curso/u02)
 2. Ciclo de vida de nuestras aplicaciones en docker
 3. Persistencia de la información en docker
+
+## Bloque 3: Orquestación de contenedores. Kubernetes
+
 4. ¿Qué nos aporta Kubernetes al despliegue de aplicaciones?
     * Tolerancia a fallos
     * Escabilidad
@@ -17,6 +20,9 @@
     * Rollback de nuestra aplicación
     * Enrutamiento de nuestra aplicación
     * Volúmenes persistentes
+
+## Bloque 4: OpenShift
+
 5. Introducción a openshift
     * ¿Qué nos aporta Openshift al despliegue de aplicaciones?
     * Ventajas que ofrece openshift para el despliegue de aplicaciones
