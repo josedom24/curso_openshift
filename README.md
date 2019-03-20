@@ -9,7 +9,7 @@
 2. [Desplegando nuestras aplicaciones en contenedores](curso/u02)
 3. [Introducción a docker](curso/u03)
 4. [Ciclo de vida de nuestras aplicaciones en docker](curso/u04)
-5. Persistencia de la información en docker
+5. [Persistencia de la información en docker](curso/u05)
 
 ## Bloque 3: Orquestación de contenedores. Kubernetes
 
