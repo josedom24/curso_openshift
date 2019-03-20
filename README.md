@@ -13,14 +13,9 @@
 
 ## Bloque 3: Orquestación de contenedores. Kubernetes
 
-5. ¿Qué nos aporta Kubernetes al despliegue de aplicaciones?
-    * Tolerancia a fallos
-    * Escabilidad
-    * Balanceo de carga
-    * Actualizaciones continúas
-    * Rollback de nuestra aplicación
-    * Enrutamiento de nuestra aplicación
-    * Volúmenes persistentes
+6. [Introducción a Kubernetes]()
+7. ¿Qué nos aporta Kubernetes: Tolerancia a fallos,escalabilidad, balanceo de carga
+8. ¿Qué nos aporta Kubernetes: Actualizaciones continúas/Roolback, enrutamiento y volumenes
 
 ## Bloque 4: OpenShift
 
