@@ -1,6 +1,11 @@
 # Curso de Openshift
 
+Bloque 1: Introducción
+
 1. [Introducción a PaaS](curso/u01)
+
+Bloque 2: Contenedores
+
 2. [Desplegando nuestras aplicaciones en contenedores](curso/u02)
 2. Ciclo de vida de nuestras aplicaciones en docker
 3. Persistencia de la información en docker
