@@ -26,7 +26,7 @@ Los contenedores son un tipo de partición aislada dentro de un solo sistema ope
 
 ## Tipos de contenedores
 
-* **Contenedores de sistemas**: Son similares a las máquinas virtuales, pero distintos contenedores comparten el núcleo del anfitrión. Un ejemplo: **LXC**, que forma parte del nucleo Linux y que nos aporta aislamiento y seguridad usando *cgroups* y *namespaces*.
+* **Contenedores de sistemas**: Son similares a las máquinas virtuales, pero distintos contenedores comparten el núcleo del anfitrión. Un ejemplo: **LXC**, que forma parte del núcleo Linux y que nos aporta aislamiento y seguridad usando *cgroups* y *namespaces*.
 * **Contenedores de aplicaciones**: Especializados en la ejecución de aplicaciones, normalmente cada contenedor ejecuta un sólo proceso. Estos contenedores contienen todas las librerías necesarias para que esa aplicación pueda funcionar. Ejemplo: **docker**.
 
 ## Despliegue de aplicaciones basada microservicios
