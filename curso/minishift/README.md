@@ -10,7 +10,6 @@ Para facilitar el trabajo con minishift podemos añadir el directorio que hemos 
 
     $ export PATH=$(pwd):$PATH
 
-    minishift v1.27.0+707887e
 
 Ejecutando el comando `minishift` puedes visualizar todos los subcomandos que podemos ejecutar, puedes obtener ayuda para ver como funcionan cada uno de ellos.
 
@@ -48,4 +47,3 @@ Para borrar la máquina virtual:
 
     $ minishift delete
 
-    
