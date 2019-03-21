@@ -15,7 +15,8 @@
 
 6. [Introducción a Kubernetes](curso/u06)
 7. [¿Qué nos aporta Kubernetes?: Tolerancia a fallos,escalabilidad, balanceo de carga](curso/u07)
-8. [¿Qué nos aporta Kubernetes?: Actualizaciones continúas/Roolback, enrutamiento y volumenes](curso/u08)
+8. [¿Qué nos aporta Kubernetes?: Actualizaciones continúas/Roolback y enrutamiento](curso/u08)
+9. [Persistencia de información en Kubernetes](curso/u09)
 
 ## Bloque 4: OpenShift
 
