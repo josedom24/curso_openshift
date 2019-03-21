@@ -20,12 +20,13 @@
 
 ## Bloque 4: OpenShift
 
-6. Introducción a openshift
+10. Introducción a openshift
     * ¿Qué nos aporta Openshift al despliegue de aplicaciones?
     * Ventajas que ofrece openshift para el despliegue de aplicaciones
     * Ciclo de vida de nuestras aplicaciones en Openshift
     * Soluciones disponibles de openshift
     * Despliegue tradicional us despliegue de miscroservicios
+
 7. minishift: Instalación local de Openshift
 8. Recursos que nos ofrece Openshift
 9. Ejemplo 1: Despliegue de una página HTML estática en OpenShift
