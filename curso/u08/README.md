@@ -1,4 +1,4 @@
-# ¿Qué nos aporta Kubernetes?: Actualizaciones continúas/Roolback, enrutamiento y volumenes
+# ¿Qué nos aporta Kubernetes?: Actualizaciones continúas/Roolback y enrutamiento
 
 ## Actualizaciones continúas
 
