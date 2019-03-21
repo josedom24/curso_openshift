@@ -10,9 +10,6 @@ Para facilitar el trabajo con minishift podemos añadir el directorio que hemos 
 
     $ export PATH=$(pwd):$PATH
 
-Y probamos la versión que hemos descargado:
-
-    $ minishift version                       
     minishift v1.27.0+707887e
 
 Ejecutando el comando `minishift` puedes visualizar todos los subcomandos que podemos ejecutar, puedes obtener ayuda para ver como funcionan cada uno de ellos.
@@ -21,7 +18,7 @@ Ejecutando el comando `minishift` puedes visualizar todos los subcomandos que po
 
 La inicialización del cluster crea una nueva máquina en nuestro virtualbox e instala en ella todas las aplicaciones necesarias para que funcione openshift (la versión que se va a instalar el openshift 3.11), la instrucción que tenemos que ejecutar para que se empiece a construir el cluster es la siguiente (el proceso dura algunos minutos):
 
-    $ minishift start
+    $ minishift start --vm-driver virtaulbox
     minishift start       
     -- Starting profile 'minishift'
     ...
@@ -36,3 +33,19 @@ La inicialización del cluster crea una nueva máquina en nuestro virtualbox e i
 
     To login as administrator:
         oc login -u system:admin
+
+## Gestionando el cluster openshift
+
+Para detener la máuina virtual que hemos creado:
+
+    $ minishift stop
+
+En cualquier otro momento podemos seguir trabajando con el cluster:
+
+    $ minishift start
+
+Para borrar la máquina virtual:
+
+    $ minishift delete
+
+    
