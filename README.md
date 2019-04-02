@@ -20,18 +20,12 @@
 
 ## Bloque 4: OpenShift
 
-10. Introducción a openshift
-    * ¿Qué nos aporta Openshift al despliegue de aplicaciones?
-    * Ventajas que ofrece openshift para el despliegue de aplicaciones
-    * Ciclo de vida de nuestras aplicaciones en Openshift
-    * Soluciones disponibles de openshift
-    * Despliegue tradicional us despliegue de miscroservicios
-
-7. minishift: Instalación local de Openshift
-8. Recursos que nos ofrece Openshift
-9. Ejemplo 1: Despliegue de una página HTML estática en OpenShift
-10. Introducción a la utilidad de línea de comandos oc
-11. Ejemplo 2: Despliegue de aplicaciones PHP en OpenShift
-12. Ejemplo 3: Despliegue de aplicaciones Python en OpenShift
-13. Ejemplo 4: Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente
+10. [Introducción a openshift](curso/u10)
+11. [minishift: Instalación local de Openshift](curso/u11)
+12. Recursos que nos ofrece Openshift
+13. Ejemplo 1: Despliegue de una página HTML estática en OpenShift
+14. Introducción a la utilidad de línea de comandos oc
+15. Ejemplo 2: Despliegue de aplicaciones PHP en OpenShift
+16. Ejemplo 3: Despliegue de aplicaciones Python en OpenShift
+17. Ejemplo 4: Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente
 
