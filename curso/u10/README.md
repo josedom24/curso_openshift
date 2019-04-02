@@ -19,8 +19,8 @@ Plataforma de Desarrollo, con características de Cloud Computing (PaaS) desarro
 
 * Nos ofrece todas las ventajas del uso de Kubernetes:
     * Tolerancia a errores
-    * Escabilidad dinámica
-    * Actualizaciones continúas
+    * Escalabilidad dinámica
+    * Actualizaciones continuas
     * Despliegues automáticos
     * Enrutamiento a nuestras aplicaciones
     * Balanceo de carga
