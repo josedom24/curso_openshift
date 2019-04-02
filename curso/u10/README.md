@@ -10,7 +10,7 @@ Plataforma de Desarrollo, con características de Cloud Computing (PaaS) desarro
 ## Openshift utiliza internamente Docker y Kubernetes
 
 * Nuestras aplicaciones se van a ejecutar en contenedores Docker con los que obtenemos todas las ventajas del despliegue de aplicaciones en contenedores. Sin embargo, veremos que el ciclo de vida del desarrollo e implantación de la aplicación se va a modificar.
-* Además al usar kubernetes como gestor de contenedores, vamos a conseguir todas las características estudiadas anteriormente: Tolerancia a fallos,escalabilidad, balanceo de carga,...
+* Además al usar kubernetes como gestor de contenedores, vamos a conseguir todas las características estudiadas anteriormente: Tolerancia a fallos, escalabilidad, balanceo de carga,...
 
 
 ## Soluciones disponibles de OpenShift
