@@ -15,7 +15,7 @@
 
 6. [Introducción a Kubernetes](curso/u06)
 7. [¿Qué nos aporta Kubernetes?: Tolerancia a fallos,escalabilidad, balanceo de carga](curso/u07)
-8. [¿Qué nos aporta Kubernetes?: Actualizaciones continúas/Roolback y enrutamiento](curso/u08)
+8. [¿Qué nos aporta Kubernetes?: Actualizaciones continúas/Rollback y enrutamiento](curso/u08)
 9. [Persistencia de información en Kubernetes](curso/u09)
 
 ## Bloque 4: OpenShift
@@ -25,6 +25,10 @@
 12. [minishift: Instalación local de Openshift](curso/u12)
 13. [Recursos que nos ofrece Openshift](curso/u13)
 14. [Ejemplo 1: Despliegue de una página HTML estática en OpenShift](curso/u14)
+15. Tolerancia a fallos, escalabilidad y balanceado de carga en OpenShift
+16. Actualizaciones continúas y Rollback de nuestra aplicación en OpenShift
+17. Despliegue continuo en OpenShift
+18. Autoescalado
 15. Ejemplo 2: Despliegue de aplicaciones Python en OpenShift
 16. Ejemplo 3: Despliegue de aplicaciones PHP en OpenShift
 17. Introducción a la utilidad de línea de comandos oc
