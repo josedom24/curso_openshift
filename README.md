@@ -24,7 +24,7 @@
 11. [OpenShift Online](curso/u11)
 12. [minishift: Instalación local de Openshift](curso/u12)
 13. [Recursos que nos ofrece Openshift](curso/u13)
-14. Ejemplo 1: Despliegue de una página HTML estática en OpenShift
+14. [Ejemplo 1: Despliegue de una página HTML estática en OpenShift](curso/u14)
 15. Ejemplo 2: Despliegue de aplicaciones Python en OpenShift
 16. Ejemplo 3: Despliegue de aplicaciones PHP en OpenShift
 17. Introducción a la utilidad de línea de comandos oc
