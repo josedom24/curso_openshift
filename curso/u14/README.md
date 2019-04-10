@@ -6,7 +6,7 @@
 
 ## Pasos a seguir
 
-1. Del catalogo elegimos la imagen de apache2
+1. Del catalogo elegimos la imagen de php
 2. Indicamos un nombre y el repositorio donde tenemos nuestro código
 3. Se va a crear un build:
     * Se crea un pod a partir de la imagen de apache2 seleccionada.
