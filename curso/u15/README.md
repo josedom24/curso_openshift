@@ -35,5 +35,22 @@ Veamos un ejemplo de escalado manual:
 
 2. Podemos aumentar y disminuir el número de pods interactuando con las dos flechas y podemos observar cómo se crean y eliminan los pods.
 
-    for i in `seq 1 2000`; do curl http://prueba-myproyecto.7e14.starter-us-west-2.openshiftapps.com/info.php; done
+## Balanceo de carga
+
+Vamos a crear tres pods en nuestro despliegue:
+
+![pods](img/pods.png)
+
+Y vamos a acceder al programa `info.php` que simplemente nos muestra el nombre del servidor en el que se está ejecutando:
+
+    <?php echo "Servidor:"; echo gethostname();echo "\n"; ?>
+
+Desde una línea de comando podemos simular un número de peticiones a nuestra aplicación y veremos como se está balanceando la carga:
+
+    for i in `seq 1 100`; do curl http://prueba-myproyecto1.7e14.starter-us-west-2.openshiftapps.com/info.php; done
+    Servidor:prueba-1-pb2sj
+    Servidor:prueba-1-vcm92
+    Servidor:prueba-1-l9zvt
+    Servidor:prueba-1-pb2sj
+    ...
 
