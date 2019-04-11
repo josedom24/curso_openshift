@@ -27,7 +27,7 @@
 14. [Ejemplo 1: Despliegue de una página HTML estática en OpenShift](curso/u14)
 15. [Tolerancia a fallos, escalabilidad y balanceado de carga en OpenShift](curso/u15)
 16. [Actualizaciones continúas y Rollback de nuestra aplicación en OpenShift](curso/u16)
-17. Despliegue continuo en OpenShift
+17. [Despliegue continuo en OpenShift](curso/u17)
 18. Autoescalado
 15. Ejemplo 2: Despliegue de aplicaciones Python en OpenShift
 16. Ejemplo 3: Despliegue de aplicaciones PHP en OpenShift
