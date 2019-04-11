@@ -55,12 +55,12 @@ Y Por último, podemos comprobar que en nuestro entorno local tenemos la imagen 
 
 Creamos un contenedor en nuestro entorno de desarrollo:
 
-  $ docker run --name aplweb -d -p 80:80 josedom24/aplicacionweb:v1
-  fbdd73529e2bb2d9ee9c6415031513741688e6d38509572251f5b624ed7dc23f
+    $ docker run --name aplweb -d -p 80:80 josedom24/aplicacionweb:v1
+    fbdd73529e2bb2d9ee9c6415031513741688e6d38509572251f5b624ed7dc23f
   
-  $ docker container ls
-  CONTAINER ID        IMAGE                        COMMAND                    CREATED             STATUS              PORTS                NAMES
-  fbdd73529e2b        josedom24/aplicacionweb:v1   "/usr/sbin/apache2ct…"   6 seconds ago       Up 5 seconds        0.0.0.0:80->80/tcp   aplweb
+    $ docker container ls
+    CONTAINER ID        IMAGE                        COMMAND                    CREATED             STATUS              PORTS                NAMES
+    fbdd73529e2b        josedom24/aplicacionweb:v1   "/usr/sbin/apache2ct…"   6 seconds ago       Up 5 seconds        0.0.0.0:80->80/tcp   aplweb
   
 ![1](img/docker1.png)
 
