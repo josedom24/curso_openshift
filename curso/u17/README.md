@@ -6,7 +6,7 @@ El despliegue continúo en OpenShift lo vamos a conseguir con la utilización de
 
 En la configuración del **build** podemos obtener la URL del webhook, en nuestro caso vamos a usar el *GitHub Webhook URL*. Para ello accedemos a **Builds**, escogemos el build que nos interesa y entramos en la pesataña **Configurations**:
 
-![buid](img/buid.png)
+![build](img/build.png)
 
 En este ejemplo el webhook será el siguiente:
 
