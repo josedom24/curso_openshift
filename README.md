@@ -29,8 +29,12 @@
 16. [Actualizaciones continúas y Rollback de nuestra aplicación en OpenShift](curso/u16)
 17. [Despliegue continuo en OpenShift](curso/u17)
 18. [Autoescalado: Escalado automático en OpenShift](curso/u18)
-15. Ejemplo 2: Despliegue de aplicaciones Python en OpenShift
-16. Ejemplo 3: Despliegue de aplicaciones PHP en OpenShift
-17. Introducción a la utilidad de línea de comandos oc
-18. Ejemplo 4: Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente
-19. Ejemplo 5: Despliegue de Wordpress
+19. Introducción a la utilidad de línea de comandos oc
+
+
+
+20. Ejemplo 2: Despliegue de aplicaciones Python en OpenShift
+21. Ejemplo 3: Despliegue de aplicaciones PHP en OpenShift
+
+22. Ejemplo 4: Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente
+23. Ejemplo 5: Despliegue de Wordpress
