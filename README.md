@@ -24,7 +24,7 @@
 11. [OpenShift Online](curso/u11)
 12. [minishift: Instalación local de Openshift](curso/u12)
 13. [Recursos que nos ofrece Openshift](curso/u13)
-14. [Despliegue de una página HTML estática en OpenShift](curso/u14)
+14. [Despliegue de nuestra primera aplicación en OpenShift](curso/u14)
 15. [Tolerancia a fallos, escalabilidad y balanceado de carga en OpenShift](curso/u15)
 16. [Actualizaciones continúas y Rollback de nuestra aplicación en OpenShift](curso/u16)
 17. [Despliegue continuo en OpenShift](curso/u17)
