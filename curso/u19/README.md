@@ -24,3 +24,11 @@ Si accedemos al cluster y no tenemos creado un proyecto tenemos que ejecutar la 
 
     oc new-project myproyecto1
 
+Y podemos comprobar el estado del cluster con:
+
+    oc status
+    In project myproyecto1 on server https://api.starter-us-west-2.openshift.com:443
+
+    You have no services, deployment configs, or build configs.
+    Run 'oc new-app' to create an application.
+
