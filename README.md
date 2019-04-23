@@ -28,7 +28,7 @@
 15. [Tolerancia a fallos, escalabilidad y balanceado de carga en OpenShift](curso/u15)
 16. [Actualizaciones continúas y Rollback de nuestra aplicación en OpenShift](curso/u16)
 17. [Despliegue continuo en OpenShift](curso/u17)
-18. Autoescalado
+18. Autoescalado: Escalado automático en OpenShift
 15. Ejemplo 2: Despliegue de aplicaciones Python en OpenShift
 16. Ejemplo 3: Despliegue de aplicaciones PHP en OpenShift
 17. Introducción a la utilidad de línea de comandos oc

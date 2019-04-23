@@ -14,9 +14,9 @@ En este ejemplo el webhook será el siguiente:
 
 ## Configuración del webhook en GitHub
 
-1. En el repositorio de gitHub, seleccion **Add Webhook** desde **Settings → Webhooks & Services**.
+1. En el repositorio de gitHub, selección **Add Webhook** desde **Settings → Webhooks & Services**.
 2. Pega la URL del webhook en el campo **Payload URL**.
-3. Cabia el campo **Content Type** de `application/x-www-form-urlencoded` a `application/json`.
+3. Cambia el campo **Content Type** de `application/x-www-form-urlencoded` a `application/json`.
 4. Pulsa el botón **Add webhook**.
 
 ![webhook](img/webhook.png)
