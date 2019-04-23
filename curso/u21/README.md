@@ -67,4 +67,16 @@ Para volver a una versión anterior de nuestra aplicación:
     NAME      REVISION   DESIRED   CURRENT   TRIGGERED BY
     prueba    3          3         1         config
 
+## Autoescalado
+
+Para crear un autoescalado en un despliegue:
+
+    $ oc autoscale dc/prueba --min 1 --max 3 --cpu-percent=20
+    horizontalpodautoscaler.autoscaling/prueba autoscaled
+        
+    $ oc get hpa
+    NAME      REFERENCE                 TARGETS   MINPODS   MAXPODS   REPLICAS   AGE
+    prueba    DeploymentConfig/prueba   5%/20%    1         3         3          34s
+    
+    $ oc describe hpa/prueba
 
