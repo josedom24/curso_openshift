@@ -45,6 +45,10 @@ Y podemos ver los pods que se han creado:
 
     $ oc describe pod/prueba-1-n6lmz
 
+Para ver los logs de un build:
+
+    $ oc logs bc/prueba
+
 Para ver los logs de un determinado despliegue:
 
     $ oc logs dc/prueba
