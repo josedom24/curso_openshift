@@ -29,7 +29,8 @@
 16. [Actualizaciones continúas y Rollback de nuestra aplicación en OpenShift](curso/u16)
 17. [Despliegue continuo en OpenShift](curso/u17)
 18. [Autoescalado: Escalado automático en OpenShift](curso/u18)
-19. Introducción a la utilidad de línea de comandos oc
+19. [Introducción a la utilidad de línea de comandos oc](curso/u19)
+20. [Despliegue de una aplicación con la utilidad de línea de comandos oc](curso/u20)
 
 
 
