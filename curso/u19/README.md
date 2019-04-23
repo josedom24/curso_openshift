@@ -22,12 +22,12 @@ Cuando nos conectamos por primera vez se crea un fichero de configuración en `~
 
 Si accedemos al cluster y no tenemos creado un proyecto tenemos que ejecutar la siguiente instrucción para crear uno:
 
-    oc new-project myproyecto1
+    oc new-project miproyecto1
 
 Y podemos comprobar el estado del cluster con:
 
     oc status
-    In project myproyecto1 on server https://api.starter-us-west-2.openshift.com:443
+    In project miproyecto1 on server https://api.starter-us-west-2.openshift.com:443
 
     You have no services, deployment configs, or build configs.
     Run 'oc new-app' to create an application.
