@@ -1,6 +1,6 @@
 # Despliegue de aplicaciones PHP en OpenShift
 
-Vamos a instalar un CMS PHP que utiliza una base de datos Sqlite. (phpSQLiteCMS). Para ello vamos a utilizar el código de la aplicación que se encuentra en el repositorio: https://github.com/josedom24/phpsqlitecms 
+Vamos a instalar un CMS PHP que utiliza una base de datos Sqlite. (phpSQLiteCMS). Para ello vamos a utilizar el código de la aplicación que se encuentra en el repositorio: https://github.com/ilosuna/phpsqlitecms
 
 Vamos a seguir los siguientes pasos desde la consola web:
 
