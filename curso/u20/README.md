@@ -72,10 +72,3 @@ Pero debemos crear una ruta para poder acceder a dicha aplicación, para ello:
 
 Y ya podemos acceder a la aplicación usando la URL `prueba-miproyecto1.7e14.starter-us-west-2.openshiftapps.com`.
 
-
- 
- 2026  oc status
- 2027  oc expose svc/prueba
- 2028  oc status
- 2029  oc status --suggest
- 2030  oc get routes
