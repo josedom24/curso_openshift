@@ -30,7 +30,11 @@
 17. [Despliegue continuo en OpenShift](curso/u17)
 18. [Autoescalado: Escalado automático en OpenShift](curso/u18)
 19. [Introducción a la utilidad de línea de comandos oc](curso/u19)
-20. Despliegue de una aplicación con la utilidad de línea de comandos oc
+20. [Despliegue de una aplicación con la utilidad de línea de comandos oc](curso/u20)
+
+
+
+
 21. [Despliegue de aplicaciones Python en OpenShift](curso/u21)
 22. [Despliegue de aplicaciones PHP en OpenShift](curso/u22)
 23. [Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente](curso/u23)
