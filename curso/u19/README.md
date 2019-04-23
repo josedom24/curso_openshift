@@ -4,9 +4,23 @@ Hasta ahora hemos manejado los recursos de nuestro cluster utilizando la página
 
 ## Instalación de la utilidad de línea de comandos oc
 
-Podemos elegir la opción **Command Line Tools** desde la opción de ayuda de la página web y en la página que obtenemos podemos descargarnos las distintas versión de la utilidad `oc`. Podemos seguir las instrucciones que encontramos en [Get Started with the CLI](https://docs.openshift.com/online/cli_reference/get_started_cli.html) para instalar la herramienta en los distintos sistemas operativos.
+Podemos bajarnos la última versión del cliente desde la [página de descargas](https://github.com/openshift/origin/releases). Y siguiendo las instrucciones que encontramos en [Get Started with the CLI](https://docs.openshift.com/online/cli_reference/get_started_cli.html) podemos instalar la herramienta en los distintos sistemas operativos.
+
+Por ejemplo para Linux Debian/Ubuntu, descomprimimos el fichero y copiamos el ejecutable `oc` en un directorio que este en el PATH.
 
 ## Conectando a nuestra cuenta de OpenShift
 
-Una vez instalado, debemos conectarnos a nuestro cluster. Para ello vamos a utilizar un token de acceso 
+Una vez instalado, debemos conectarnos a nuestro cluster. Para ello vamos a utilizar un token de acceso. Lo más sencillo es obtener el token desde la página web eligiendo la opción **Copy Login Command** desde las opciones de tu usuario.
+
+Pegamos en la línea de comando y obtenemos el comando para conectarnos a nuestro cluster:
+
+    oc login https://api.starter-us-west-2.openshift.com --token=xxxxxxxxxxxxxxx.....
+
+Cuando nos conectamos por primera vez se crea un fichero de configuración en `~/.kube/config` con la información de acceso al cluster.
+
+## Creación de un nuevo proyecto
+
+Si accedemos al cluster y no tenemos creado un proyecto tenemos que ejecutar la siguiente instrucción para crear uno:
+
+    oc new-project myproyecto1
 
