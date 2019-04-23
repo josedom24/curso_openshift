@@ -24,18 +24,14 @@
 11. [OpenShift Online](curso/u11)
 12. [minishift: Instalación local de Openshift](curso/u12)
 13. [Recursos que nos ofrece Openshift](curso/u13)
-14. [Ejemplo 1: Despliegue de una página HTML estática en OpenShift](curso/u14)
+14. [Despliegue de una página HTML estática en OpenShift](curso/u14)
 15. [Tolerancia a fallos, escalabilidad y balanceado de carga en OpenShift](curso/u15)
 16. [Actualizaciones continúas y Rollback de nuestra aplicación en OpenShift](curso/u16)
 17. [Despliegue continuo en OpenShift](curso/u17)
 18. [Autoescalado: Escalado automático en OpenShift](curso/u18)
 19. [Introducción a la utilidad de línea de comandos oc](curso/u19)
-20. [Despliegue de una aplicación con la utilidad de línea de comandos oc](curso/u20)
-
-
-
-20. Ejemplo 2: Despliegue de aplicaciones Python en OpenShift
-21. Ejemplo 3: Despliegue de aplicaciones PHP en OpenShift
-
-22. Ejemplo 4: Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente
-23. Ejemplo 5: Despliegue de Wordpress
+20. Despliegue de una aplicación con la utilidad de línea de comandos oc
+21. [Despliegue de aplicaciones Python en OpenShift](curso/u21)
+22. Despliegue de aplicaciones PHP en OpenShift
+23. Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente
+24. Despliegue de Wordpress

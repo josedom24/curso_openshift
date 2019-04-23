@@ -1,7 +1,7 @@
-# Ejemplo 1: Despliegue de una página HTML estática en OpenShift
+# Despliegue de una página HTML estática en OpenShift
 
 * Vamos a crear una aplicación web estática con un servidor web apache2.
-* Nuestra página la tenemos en un repositorio de GitHub
+* Nuestra página la tenemos en un repositorio de GitHub (https://github.com/josedom24/html_for_openshift)
 * Vamos a crear nuestra aplicación usando **source2image**: al crear la aplicación vamos a escoger una imagen con apache2 y vamos a indicar nuestro repositorio con el código, a partir de esta información se va a crear una imagen docker con apache2 y nuestro código que va a servir para desplegar la aplicación.
 
 ## Pasos a seguir
