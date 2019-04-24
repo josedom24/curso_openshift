@@ -61,6 +61,28 @@ Pero al montar el volumen en el directorio indicado, hemos perdido su contenido,
         plugins
         themes
 
+Podemos concluir que cada vez que hagamos un nuevo despliegue se creara de nuevo el sistema de fichero de los contenedores, a excepción del directorio `wp-content` cuya información esta guardada en el volumen. Seguimos teniendo un problema: el fichero `wp-config.php` donde se guarda la configuración de WordPress se perderá cada vez que hacemos un despliegue. Para solucionarlo, vamos a copiar al volumen persistente dos ficheros:
+
+1. Un fichero `wp-config.php` con la configuración de wordpress con los datos para el acceso a la base de datos:
+
+        $ cp /opt/ficheros
+        $ oc cp wp-config.php wordpress-2-dsgnr:/opt/app-root/src/wp-content
+
+2. Un fichero `run.sh` que vamos a ejecutar cada vez que hagamos un nuevo despliegue y va a crear un enlace simbólico al fichero de configuración que tenemos guardado: 
+
+        $ oc cp run.sh wordpress-2-dsgnr:/opt/app-root/src/wp-content
+    
+    El contenido del fichero `run.sh` es:
+
+        #!/bin/bash
+        ln -s /opt/app-root/src/wp-content/wp-config.php /opt/app-root/src/wp-config.php
+        exec /usr/libexec/s2i/run
+    
+    Y tenemos que darle permiso de ejecución:
+
+        $ oc exec wordpress-2-dsgnr chmod +x wp-content/run.sh
+
+
 
 
     spec:
