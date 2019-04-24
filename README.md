@@ -32,9 +32,9 @@
 19. [Introducción a la utilidad de línea de comandos oc](curso/u19)
 20. [Despliegue de una aplicación con la utilidad de línea de comandos oc](curso/u20)
 21. [Operaciones avanzadas con la utilidad de línea de comandos oc](curso/u21)
-22. Despliegue de aplicaciones Python en OpenShift
-23. Despliegue de aplicaciones PHP en OpenShift
-24. Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente
+22. [Despliegue de aplicaciones Python en OpenShift](curso/u22)
+23. [Despliegue de aplicaciones PHP en OpenShift](curso/u23)
+24. [Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente](curso/u24)
 25. Trabajando con bases de datos en OpenShift
 26. [Despliegue de Wordpress en OpenShift](curso/u26)
 27. [Despliegue de Wordpress con un template en OpenShift](curso/u27)
