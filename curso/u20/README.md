@@ -2,6 +2,10 @@
 
 Una vez que nos hemos conectado a nuestro cluster y hemos creado un proyecto, vamos a crear nuestra aplicación. En este caso, volvemos a desplegar la misma aplicación que en el ejemplo anterior, usando **source2image**.
 
+Para ver todos recursos del catálogo que podemos utilizar:
+
+    $ oc new-app --list
+
 Seguimos los mismos pasos, del catálogo elegimos la imagen de php y la versión, para buscar imágenes:
 
     $ oc new-app --search php
