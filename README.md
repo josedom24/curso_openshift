@@ -36,5 +36,5 @@
 23. Despliegue de aplicaciones PHP en OpenShift
 24. Despliegue de aplicaciones PHP en OpenShift con almacenamiento persistente
 25. Trabajando con bases de datos en OpenShift
-26. Despliegue de Wordpress
+26. Despliegue de Wordpress en OpenShift
 27. Despliegue de Wordpress con un template
