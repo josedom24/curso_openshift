@@ -82,11 +82,24 @@ Podemos concluir que cada vez que hagamos un nuevo despliegue se creara de nuevo
 
         $ oc exec wordpress-2-dsgnr chmod +x wp-content/run.sh
 
+## Ejecutando una comando en el despliegue
 
-
+Como hemos indicado anteriormente cada vez que hagamos un despliegue tenemos que ejecutar el script anterior para que se cree el enlace directo al fichero `wp-config.php`, para ello elegimos el despliegue de *wordpress* y en el botón **Actions** elegimos la opción **Edit YAML** y vamos a añadir la sección `command`:
 
     spec:
-          containers:
-            - command:
-                - /opt/app-root/src/wp-content/run
+      containers:
+        - image: >-
+            172.30.254.23:5000/proyecto-wordpress/wordpress@sha256:7458214fb3da2a6deec8fa13dbdf8af42b09a75e98735937bf67f6da72adb468
+          imagePullPolicy: Always
+          name: wordpress
+          command:
+            - /opt/app-root/src/wp-content/run.sh
     ...
+
+En el momento que hemos modificado la configuración a nuestra aplicación se produce un nuevo despliegue de forma automática que implantará la modificación indicada.
+
+## Despliegue de WordPress
+
+Para concluir accedemos a la URL de nuestra aplicación y terminamos de configurar la instalación de WordPress (como podemos observar se ha saltado el paso donde nos preguntan por las credenciales de la base de datos, ya que hemos indicado un fichero `wp-config.php` con la configuración).
+
+![wp6](img/wp.png)
