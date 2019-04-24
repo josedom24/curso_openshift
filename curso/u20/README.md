@@ -55,7 +55,11 @@ Para ver los logs de un determinado despliegue:
 
 Y, por ejemplo, para ejecutar un comando en un determinado pod:
 
-    oc exec prueba-1-n6lmz  -it /bin/bash
+    $ oc exec prueba-1-n6lmz  -it /bin/bash
+
+También podemos ejecutar el siguiente comando para acceder al pod:
+
+    $ oc rsh prueba-1-n6lmz
 
 ## Accediendo a nuestra aplicación
 
