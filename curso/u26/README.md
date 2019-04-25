@@ -77,7 +77,7 @@ Podemos concluir que cada vez que hagamos un nuevo despliegue se creara de nuevo
 
         $ oc exec wordpress-2-dsgnr chmod +x wp-content/run.sh
 
-## Ejecutando una comando en el despliegue
+## Ejecutando un comando en el despliegue
 
 Como hemos indicado anteriormente cada vez que hagamos un despliegue tenemos que ejecutar el script anterior para que se cree el enlace directo al fichero `wp-config.php`, para ello elegimos el despliegue de *wordpress* y en el botón **Actions** elegimos la opción **Edit YAML** y vamos a añadir la sección `command`:
 
