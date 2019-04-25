@@ -25,34 +25,38 @@ Y lo conectamos al despliegue *appphp* en el directorio `/opt/app-root/src/cms/d
 
 En el momento que hemos añadido el almacenamiento a nuestra aplicación se produce un nuevo despliegue de forma automática que implantará la aplicación con el volumen persistente.
 
-En el directorio `cms/data` de phpSQLiteCMS se guardadan las bases de datos sqltile de la aplicación. Por lo tanto es el directorio que necesitamos que este guardado en un volumen persistente.
+En el directorio `cms/data` de phpSQLiteCMS se guardan las bases de datos sqltile de la aplicación. Por lo tanto es el directorio que necesitamos que este guardado en un volumen persistente.
 
-Pero al montar el volumen en el directorio indicado, hemos perdido su contenido, por lo que vamos a copiar las bases de datos desde nuestro ordenador:
+Pero al montar el volumen en el directorio indicado, hemos perdido su contenido, y al acceder a la aplicación nos da un error:
+
+![wp5](img/error.png)
+
+Para solucionarlo vamos a copiar las bases de datos desde nuestro ordenador:
 
 * He clonado el repositorio de WordPress en mi ordenador:
 
         $ git clone https://github.com/ilosuna/phpsqlitecms.git
-        $ cd phpsqlitecms
+        $ cd phpsqlitecms/cms
 
 * Vamos a copiar el contenido de este directorio al volumen, para ello:
 
         $ oc get pods
         NAME             READY     STATUS      RESTARTS   AGE
         appphp-1-build   0/1       Completed   0          12m
-        appphp-3-tj5jm   1/1       Running     0          1m
+        appphp-2-tj5jm   1/1       Running     0          1m
 
-        $ oc cp data appphp-3-tj5jm:cms/
+        $ oc cp data appphp-2-tj5jm:cms/
 
 * Comprobamos que hemos copiado los ficheros:
 
-        $ oc exec appphp-3-tj5jm ls cms/data
-        index.php
-        plugins
-        themes
+        $ oc exec appphp-2-tj5jm ls cms/data
+        content.sqlite
+        entries.sqlite
+        userdata.sqlite
+  
+Podemos concluir que cada vez que hagamos un nuevo despliegue se creara de nuevo el sistema de fichero de los contenedores, a excepción del directorio `cms/data` cuya información esta guardada en el volumen. 
 
-Podemos concluir que cada vez que hagamos un nuevo despliegue se creara de nuevo el sistema de fichero de los contenedores, a excepción del directorio `wp-content` cuya información esta guardada en el volumen. 
-
-
+Ya podemos acceder a nuestra aplicación. Para terminar el ejercicio podemos comprobar que las modificaciones que hacemos en la configuración de la página se mantienen cuando se borran los pods, por ejemplo al crear un nuevo despliegue.
 
 
 
