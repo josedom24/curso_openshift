@@ -33,8 +33,6 @@ Podemos ver el estado de nuestra aplicación ejecutando:
 
 Para terminar tenemos que crear la ruta de acceso a la aplicación:
 
-Pero debemos crear una ruta para poder acceder a dicha aplicación, para ello:
-
     $ oc expose svc/app-python
     route.route.openshift.io/app-python exposed
     
