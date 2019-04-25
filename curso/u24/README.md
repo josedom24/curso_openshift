@@ -19,7 +19,24 @@ A continuación vamos a crear un nuevo volumen:
 
 ![wp4](img/volumen.png)
 
-Y lo conectamos al despliegue *appphp* en el directorio `/opt/app-root/src/cms/data`: Elegimos el despliegue de *appphp* y en el botón **Actions** elegimos la opción **Add Storage*:
+Al crear el volumen tenemos que elegir entre varios medio de almacenamiento (**Storage Class**). Las posibilidades de medios de almacenamiento dependerán de la infraestructura donde está instalado OpenShift. Como medios de almacenamiento podemos tener: NFS, HostPath, GlusterFS, Ceph RBD, OpenStack Cinder, AWS Elastic Block Store (EBS), GCE Persistent Disk, iSCSI, Fibre Channel,...
+
+ OpenShiftOnline está instalado en AWS por lo que tenemos dos medios de almacenamiento: **ebs**: Elastic Block Store que proporciona volúmenes de almacenamiento, y *gp2-encrypted*, similar al anterior pero la información está cifrada.
+
+Dependiendo del medio de almacenamiento que tenga nuestra infraestructura tendremos distintas formas de acceso a la información guardada en el volumen:
+* ReadWriteOnce: lectura y escritura solo para un nodo (RWO)
+* ReadOnlyMany: sólo lectura para muchos nodos (ROX)
+* ReadWriteMany: lectura y escritura para muchos nodos (RWX)
+
+Por ejemplo los volúmenes de tipo **ebs** no soportan el modo *ReadWriteMany*, por consecuencia, si tenemos un despliegue al que hemos conectado un volumen con tipo de acceso *ReadWriteOnce*, este despliegue no podrá replicarse, es decir no podemos tener varios pods replicados ya que no podríamos montar el volumen al mismo tiempo en los distintos pods.
+
+En la siguiente tabla podemos ver la relación entre los medios de almacenamiento y los tipos de acceso que soportan:
+
+![wp5](img/tabla.png)
+
+## Añadir el volumen a un despliegue
+
+El volumen que hemos creado lo conectamos al despliegue *appphp* en el directorio `/opt/app-root/src/cms/data`: Elegimos el despliegue de *appphp* y en el botón **Actions** elegimos la opción **Add Storage*:
 
 ![wp5](img/volumen2.png)
 
@@ -57,20 +74,4 @@ Para solucionarlo vamos a copiar las bases de datos desde nuestro ordenador:
 Podemos concluir que cada vez que hagamos un nuevo despliegue se creara de nuevo el sistema de fichero de los contenedores, a excepción del directorio `cms/data` cuya información esta guardada en el volumen. 
 
 Ya podemos acceder a nuestra aplicación. Para terminar el ejercicio podemos comprobar que las modificaciones que hacemos en la configuración de la página se mantienen cuando se borran los pods, por ejemplo al crear un nuevo despliegue.
-
-
-
-
-
-En este ejemplo vamos a utilizar un volumen (almacenamiento persistente) para guardar las bases de datos de la aplicación. Con esto estamos consiguiendo que la información es compartida por todos los pods de una aplicación. Para ello hay que tener en cuenta:
-
-1. El directorio donde se almacenan las bases de datos es `/cms/data`.
-2. Nosotros vamos a crear un volumen persistente y lo vamos a montar en ese directorio.
-3. En el primer despliegue que creemos vamos a copiar al volumen persistente las bases de datos inicializadas.
-4. Para ello vamos a hacer un fork del repositorio (https://github.com/josedom24/phpsqlitecms) y vamos a guardar en un directorio las bases de datos, para posteriormente poder copiarlas al volumen.
-
-
-
-
-
 
