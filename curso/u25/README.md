@@ -33,7 +33,7 @@ Para crear una aplicación mysql utilizamos la siguiente instrucción indicando 
       dc/mysql deploys openshift/mysql:5.7 
         deployment #1 running for 9 seconds - 1 pod
 
-Podemos ver el pod que se ha creado y acceder aél para ejecutar el cliente mysql:
+Podemos ver el pod que se ha creado y acceder a él para ejecutar el cliente mysql:
 
     $ oc get pods
     NAME            READY     STATUS    RESTARTS   AGE
@@ -72,7 +72,7 @@ A continuación vamos a crear una tabla en la base de datos:
 
     $ oc delete pod/mysql-1-rr5kk 
     pod "mysql-1-rr5kk" deleted
-    
+
     $ oc get pods
     NAME            READY     STATUS    RESTARTS   AGE
     mysql-1-pr57f   1/1       Running   0          9s
@@ -92,95 +92,64 @@ Como podemos ver se ha perdido la información de la base de datos, ya que estam
 
 En esta ocasión vamos a usar el template `mysql-persistent`, en un nuevo proyecto ejecutamos la siguiente instrucción:
 
-    $ oc new-app mysql-persistent --param=MYSQL_USER=admin --param=MYSQL_PASSWORD=asdasd --param=MYSQL_DATABASE=prueba --name mysql
+    $ oc new-app mysql-persistent --param=MYSQL_USER=user --param=MYSQL_PASSWORD=pass --param=MYSQL_DATABASE=prueba --name mysql
 
 
-oc status
-In project miproyecto1 on server https://api.starter-us-west-2.openshift.com:443
+    $ oc status
+    In project miproyecto1 on server https://api.starter-us-west-2.openshift.com:443
 
-svc/mysql - 172.30.201.218:3306
-  dc/mysql deploys openshift/mysql:5.7 
-    deployment #1 deployed about a minute ago - 1 pod
+    svc/mysql - 172.30.201.218:3306
+      dc/mysql deploys openshift/mysql:5.7 
+        deployment #1 deployed about a minute ago - 1 pod
 
-View details with 'oc describe <resource>/<name>' or list everything with 'oc get all'.
- jose@pandora  ~  oc get pods
-NAME            READY     STATUS    RESTARTS   AGE
-mysql-1-wzqjl   1/1       Running   0          1m
- jose@pandora  ~  oc rsh mysql-1-wzqjl 
-sh-4.2$ mysql -u user -p 
-Enter password: 
-ERROR 1045 (28000): Access denied for user 'user'@'localhost' (using password: YES)
-sh-4.2$ show databases;
-sh: show: command not found
-sh-4.2$ mysql -u user -p
-Enter password: 
-ERROR 1045 (28000): Access denied for user 'user'@'localhost' (using password: YES)
-sh-4.2$ mysql -u user -p
-Enter password: 
-ERROR 1045 (28000): Access denied for user 'user'@'localhost' (using password: YES)
-sh-4.2$ mysql -u admin -p
-Enter password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 19
-Server version: 5.7.21 MySQL Community Server (GPL)
+Podemos ver el pod que se ha creado y acceder a él para ejecutar el cliente mysql:
 
-Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+    $ oc get pods
+    NAME            READY     STATUS    RESTARTS   AGE
+    mysql-1-wzqjl   1/1       Running   0          1m
+    
+    $ oc rsh mysql-1-wzqjl 
+    
+    sh-4.2$ mysql -u user -p 
+    Enter password: 
+    ...
+    mysql> use prueba;
+    Database changed
+    
+    mysql> create table tabla_prueba(id INT);
+    Query OK, 0 rows affected (0.18 sec)
 
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
+    mysql> show tables;
+    +------------------+
+    | Tables_in_prueba |
+    +------------------+
+    | tabla_prueba     |
+    +------------------+
+    1 row in set (0.00 sec)
 
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+**¿Qué ocurre si se elimina el pod?**
+    
+    $ oc delete pod/mysql-1-wzqjl
+    pod "mysql-1-wzqjl" deleted
+    
+    $ oc get pods
+    NAME            READY     STATUS              RESTARTS   AGE
+    mysql-1-jbqdb   0/1       ContainerCreating   0          15s
+    
+    $ oc rsh mysql-1-jbqdb
+    sh-4.2$ mysql -u admin -p
+    Enter password: 
+    ...
+    
+    mysql> use prueba;
+    Database changed
+    
+    mysql> show tables;
+    +------------------+
+    | Tables_in_prueba |
+    +------------------+
+    | tabla_prueba     |
+    +------------------+
+    1 row in set (0.00 sec)
 
-mysql> use prueba;
-Database changed
-mysql> create table tabla_prueba(id INT);
-Query OK, 0 rows affected (0.18 sec)
-
-mysql> show tables;
-+------------------+
-| Tables_in_prueba |
-+------------------+
-| tabla_prueba     |
-+------------------+
-1 row in set (0.00 sec)
-
-mysql> exit
-Bye
-sh-4.2$ exit
-exit
- jose@pandora  ~  oc delete pod/mysql-1-wzqjl
-pod "mysql-1-wzqjl" deleted
- jose@pandora  ~  oc get pods
-NAME            READY     STATUS              RESTARTS   AGE
-mysql-1-jbqdb   0/1       ContainerCreating   0          15s
- jose@pandora  ~  oc rsh mysql-1-jbqdb
-error: unable to upgrade connection: container not found ("mysql")
- ✘ jose@pandora  ~  oc rsh mysql-1-jbqdb
-error: unable to upgrade connection: container not found ("mysql")
- ✘ jose@pandora  ~  oc rsh mysql-1-jbqdb
-sh-4.2$ mysql -u admin -p
-Enter password: 
-Welcome to the MySQL monitor.  Commands end with ; or \g.
-Your MySQL connection id is 3
-Server version: 5.7.21 MySQL Community Server (GPL)
-
-Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
-
-Oracle is a registered trademark of Oracle Corporation and/or its
-affiliates. Other names may be trademarks of their respective
-owners.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-mysql> use prueba;
-Database changed
-mysql> show tables;
-+------------------+
-| Tables_in_prueba |
-+------------------+
-| tabla_prueba     |
-+------------------+
-1 row in set (0.00 sec)
-
-mysql> 
+Como podemos ver en esta ocasión no se ha perdido la información de la base de datos, ya que estamos utilizando un volumen para guardar la información que no queremos perder.
