@@ -38,7 +38,7 @@ Creamos una base de datos:
 
     $ docker exec -it some-mysql bash
     root@75544a024f9b:/# mysql -u root -p -h localhost
-  ...
+    ...
     create database dbtest;
     Query OK, 1 row affected (0.07 sec)
   
