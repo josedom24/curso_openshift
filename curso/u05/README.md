@@ -22,7 +22,7 @@
 
 ## Ejemplo de almacenamiento persistente
 
-Contenedor con mysql: guardamos la información de la base de datos en un volumen persistente:
+Vamos a crear un contenedor con mysql donde guardamos la información de la base de datos en un volumen persistente:
 
     $ docker run --name some-mysql \ 
                  -v /opt/mysql:/var/lib/mysql \
@@ -42,7 +42,7 @@ Creamos una base de datos:
     create database dbtest;
     Query OK, 1 row affected (0.07 sec)
   
-Qué pasa si nuestro uestro contenedor falla!!!
+Qué pasa si nuestro nuestro contenedor falla!!!
 
     $ docker container rm -f some-mysql 
 
