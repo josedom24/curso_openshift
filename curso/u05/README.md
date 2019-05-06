@@ -24,10 +24,7 @@
 
 Vamos a crear un contenedor con mysql donde guardamos la información de la base de datos en un volumen persistente:
 
-    $ docker run --name some-mysql \ 
-                 -v /opt/mysql:/var/lib/mysql \
-                 -e MYSQL_ROOT_PASSWORD=asdasd \
-                 -d mysql
+    $ docker run --name some-mysql -v /opt/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=asdasd -d mysql
 
 Comprobamos que se ha guardado la BD en el host:
 
@@ -48,10 +45,7 @@ Qué pasa si nuestro nuestro contenedor falla!!!
 
 Podemos crear otro contenedor y comprobar como sigue existiendo la BD:
 
-    $ docker run --name some-mysql2 \
-                -v /opt/mysql:/var/lib/mysql \
-                -e MYSQL_ROOT_PASSWORD=asdasd \
-                -d mysql
+    $ docker run --name some-mysql2 -v /opt/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=asdasd -d mysql
     
     $ docker exec -it some-mysql2 bash
     root@878f77d80fcf:/# mysql -u root -p -h localhost
