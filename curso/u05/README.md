@@ -36,15 +36,15 @@ Comprobamos que se ha guardado la BD en el host:
   
 Creamos una base de datos:
 
-  $ docker exec -it some-mysql bash
-  root@75544a024f9b:/# mysql -u root -p -h localhost
+    $ docker exec -it some-mysql bash
+    root@75544a024f9b:/# mysql -u root -p -h localhost
   ...
-  create database dbtest;
-  Query OK, 1 row affected (0.07 sec)
+    create database dbtest;
+    Query OK, 1 row affected (0.07 sec)
   
 Qué pasa si nuestro uestro contenedor falla!!!
 
-  $ docker container rm -f some-mysql 
+    $ docker container rm -f some-mysql 
 
 Podemos crear otro contenedor y comprobar como sigue existiendo la BD:
 
