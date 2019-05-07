@@ -4,7 +4,7 @@
 
 Podemos modificar nuestro despliegue para actualizar a la última versión de nuestra aplicación. Comprobamos que se crean 3 nuevos pods con la última versión de nuestra aplicación:
 
-    kubectl set image deployment pagweb pagweb=josedom24/aplicacionweb:v2
+    kubectl set image deployment pagweb *=josedom24/aplicacionweb:v2
     deployment.extensions/pagweb image updated
 
     kubectl get pods
