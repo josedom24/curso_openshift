@@ -1,14 +1,20 @@
-# Recursos que nos ofrece OpenShift
+# Despliegue de nuestra primera aplicación en OpenShift
 
-* **Proyectos**: Permiten a los usuarios organizar y controlar sus aplicaciones.
-* **Aplicación**: Nuestra aplicaciónes una aplicación Kubernetes, por los están formada por distintos recursos: deployment, pods, service, routes
-* **Builds**: Es el proceso por el que se crea la imagen desde la que se va a crear nuestra aplicación. Tenemos muchas estrategias:
-    * Desde una imagen, desde un fichero Dockerfile, ...
-    * source2image
-    * Pipeline de Jenkins
-    * ...
-* **Registro de imágenes**: Las imágenes que se crean en los builds se guardan en un registro interno.
-* **Routes**: Se asocia automática una ruta (nombre) para acceder a cada aplicación.
-* **Catálogo de servicios**: Conjunto de imágenes y plantillas bases. A partir de ellas podemos construir (builds) nuevas imágenes con s2i.
-* **Web Console**: Aplicación web que nos permite trabajar con nuestros recursos de OpenShift
-* **cli oc**:Herramienta de línea de comandos que nos permite trabajar con nuestros recursos de OpenShift
+* Vamos a crear una aplicación web con un servidor web apache2. Nuestra aplicación tendrá ficheros html y php.
+* Nuestra aplicación la tenemos en un repositorio de GitHub (https://github.com/josedom24/html_for_openshift)
+* Vamos a crear nuestra aplicación usando **source2image**: al crear la aplicación vamos a escoger una imagen con apache2 y php y vamos a indicar nuestro repositorio con el código, a partir de esta información se va a crear una imagen docker con apache2, php y nuestro código, que va a servir para desplegar la aplicación.
+
+## Pasos a seguir
+
+1. Del catalogo elegimos la imagen de php y elegimos la versión de php con la que vamos a trabajar.
+2. Indicamos un nombre y el repositorio donde tenemos nuestro código.
+3. Se va a crear un build:
+    * Se crea un pod a partir de la imagen de apache2 seleccionada.
+    * Se inyecta en ese pod el código del repositorio.
+    * Y se crea una nueva imagen con apache2 y nuestra aplicación.
+4. A partir de la imagen creada:
+    * Se crea un deployment que crear un pod con la aplicación.
+    * Se crea un servicio de acceso a la aplicación
+    * Y se crea una ruta de acceso.
+5. Ya tenemos desplegada nuestra aplicación y podemos acceder a ella.
+
