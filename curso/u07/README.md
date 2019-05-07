@@ -4,7 +4,7 @@
 
 Creamos un despliegue a partir de la imagen `josedom24/aplicacionweb:v1` y comprobamos que se ha creado un pod:
 
-    kubectl create deploy pagweb --image=josedom24/aplicacionweb:v1
+    kubectl run pagweb --image=josedom24/aplicacionweb:v1
 
     kubectl get pod
     NAME                     READY   STATUS    RESTARTS   AGE
