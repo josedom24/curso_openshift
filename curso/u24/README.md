@@ -36,7 +36,7 @@ En la siguiente tabla podemos ver la relación entre los medios de almacenamient
 
 ## Añadir el volumen a un despliegue
 
-El volumen que hemos creado lo conectamos al despliegue *appphp* en el directorio `/opt/app-root/src/cms/data`: Elegimos el despliegue de *appphp* y en el botón **Actions** elegimos la opción **Add Storage*:
+El volumen que hemos creado lo conectamos al despliegue *appphp* en el directorio `/opt/app-root/src/cms/data`: Elegimos el despliegue de *appphp* y en el botón **Actions** elegimos la opción **Add Storage**:
 
 ![wp5](img/volumen2.png)
 
@@ -50,7 +50,7 @@ Pero al montar el volumen en el directorio indicado, hemos perdido su contenido,
 
 Para solucionarlo vamos a copiar las bases de datos desde nuestro ordenador:
 
-* He clonado el repositorio de WordPress en mi ordenador:
+* He clonado el repositorio de *phpsqlitecms*  en mi ordenador:
 
         $ git clone https://github.com/ilosuna/phpsqlitecms.git
         $ cd phpsqlitecms/cms
