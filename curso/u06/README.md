@@ -10,7 +10,7 @@ Gestionamos un cluster:
     nodo-2   Ready    <none>   42s     v1.12.2
     nodo-3   Ready    <none>   42s     v1.12.2
 
-## Recursos de Kuberenetes
+## Recursos de Kubernetes
 
 * **Pods**: La unidad mínima de computación, permite ejecutar contenedores. Representa un conjunto de contenedores y almacenamiento compartido que comparte una única IP.
 * **ReplicaSet**: Asegura que siempre se ejecute un número de réplicas de un pod determinado. Nos proporciona las siguientes características:

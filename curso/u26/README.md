@@ -24,7 +24,7 @@ A continuación vamos a crear un nuevo volumen:
 
 ![wp4](img/volumen.png)
 
-Y lo conectamos al despliegue *wordpress* en el directorio `/opt/app-root/src/wp-content`: Elegimos el despliegue de *wordpress* y en el botón **Actions** elegimos la opción **Add Storage*:
+Y lo conectamos al despliegue *wordpress* en el directorio `/opt/app-root/src/wp-content`: Elegimos el despliegue de *wordpress* y en el botón **Actions** elegimos la opción **Add Storage**:
 
 ![wp5](img/volumen2.png)
 
