@@ -1,4 +1,4 @@
-# Curso de Openshift
+# Curso de OpenShift
 
 0. [Presentación del curso](curso/u0/u0.pdf)
 
