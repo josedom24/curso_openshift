@@ -6,7 +6,7 @@ En este ejemplo vamos a utilizar un volumen (almacenamiento persistente) para gu
 
 En este momento tenemos instalado phpSQLiteCMS pero sin almacenamiento persistente. Para trabajar con almacenamiento persistente en el próximo paso vamos a crear un volumen, pero antes vamos a cambiar la estrategia de despliegue de la aplicación:
 
-* Por defecto la estrategia es **Rolling**: En este caso se crean los nuevos pods de la nueva versión edl despliegue se comprueban que funcionan y posteriormente se eliminan los pods de la versión anterior.
+* Por defecto la estrategia es **Rolling**: En este caso se crean los nuevos pods de la nueva versión del despliegue se comprueban que funcionan y posteriormente se eliminan los pods de la versión anterior.
 * Nosotros deseamos que la estrategia sea **Recreate**: En esta situación se eliminan los pods de la versión actual y posteriormente se crean los nuevos pods de la nueva versión. Si vamos a trabajar con volúmenes, necesitamos configurar este tipo de estrategia, ya que la primera nos da errores al intentar conectar el volumen a un nuevo pod cuando sigue conectado al anterior pod.
 
 Para cambiar la estrategia: Elegimos el despliegue de *appphp* y en el botón **Actions** elegimos la opción **Edit**:
