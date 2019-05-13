@@ -18,7 +18,7 @@ Lo primero que vamos a hacer es buscar en el catálogo los recursos que podemos 
     mysql
     ...
 
-Como podemos observar podemos utilizar una imagen `mysql` sin almacenamiento persitente o un un template `mysql-persistent` que nos ofrece almacenamiento persistente.
+Como podemos observar podemos utilizar una imagen `mysql` sin almacenamiento persistente o un un template `mysql-persistent` que nos ofrece almacenamiento persistente.
 
 ## Despliegue de una aplicación mysql sin almacenamiento persistente
 
