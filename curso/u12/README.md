@@ -35,7 +35,7 @@ La inicialización del cluster crea una nueva máquina en nuestro virtualbox e i
 
 ## Gestionando el cluster openshift
 
-Para detener la máuina virtual que hemos creado:
+Para detener la máquina virtual que hemos creado:
 
     $ minishift stop
 
