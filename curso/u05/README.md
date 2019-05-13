@@ -19,7 +19,7 @@ Vamos a crear un contenedor con mysql donde guardamos la información de la base
 
     $ docker run --name some-mysql -v /opt/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=asdasd -d mysql
 
-Comprobamos que se ha guardado la BD en el host:
+Comprobamos que se ha guardado la base de datos en el host:
 
     /opt/mysql$ ls
     ibdata1  ib_logfile0  ib_logfile1  ibtmp1  #innodb_temp  mysql  mysql.ibd  undo_001  undo_002
