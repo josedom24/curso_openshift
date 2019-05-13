@@ -9,6 +9,7 @@ Nosotros hemos creado una unidad nfs compartida entre los nodos:
     kubectl get pv
     NAME     CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS    REASON   AGE
     nfs-pv   5Gi        RWX            Recycle          Available                                     6s
+
 Debemos reservar espacio en el `PersistentVolumen`, creando un recurso `PersistentVolumenClaim`, para ello utilizamos el fichero `pvc.yaml`:
 
     apiVersion: v1
