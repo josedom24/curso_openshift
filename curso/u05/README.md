@@ -1,12 +1,5 @@
 # Persistencia de la información en docker
 
-## Construir aplicaciones sin estado(Stateless)
-
-* Una aplicación sin estado(Stateless) es aquella que no guarda ninguna información. Se ejecuta, hace su trabajo y se elimina.
-* Una aplicación con estado (Stateful) es aquella que necesita guardar información para su funcionamiento.
-* Si creo una aplicación desde 0 debería construirla sin estado
-* La mayoría de las aplicaciones actuales son Stateful.
-
 ## Uso de volúmenes persistentes
 
 * La información que se guarda en un contenedor no es persistente.
