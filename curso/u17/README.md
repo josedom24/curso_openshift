@@ -1,10 +1,10 @@
 # Despliegue continuo en OpenShift
 
-El despliegue continúo en OpenShift lo vamos a conseguir con la utilización de un `webhook`. Lo que queremos conseguir es que cada vez que ocurra un determinado evento en el repositorio github (por ejemplo que hayamos hecho un `push` y que haya cambiado el contenido), gitHub haga una llamada a la API de OpenShift y que de esta manera, de forma automática, se cree un nuevo **build**, que creará una nueva imagen y que producirá un nuevo despliegue con la nueva versión.
+El despliegue continúo en OpenShift lo vamos a conseguir con la utilización de un `webhook`. Lo que queremos conseguir es que cada vez que ocurra un determinado evento en el repositorio github (por ejemplo que hayamos hecho un `push` y que haya cambiado el contenido), github haga una llamada a la API de OpenShift y que de esta manera, de forma automática, se cree un nuevo **build**, que creará una nueva imagen y que producirá un nuevo despliegue con la nueva versión.
 
 ## Obtener la URL del webhook
 
-En la configuración del **build** podemos obtener la URL del webhook, en nuestro caso vamos a usar el *GitHub Webhook URL*. Para ello accedemos a **Builds**, escogemos el build que nos interesa y entramos en la pesataña **Configurations**:
+En la configuración del **build** podemos obtener la URL del webhook, en nuestro caso vamos a usar el *GitHub Webhook URL*. Para ello accedemos a **Builds**, escogemos el build que nos interesa y entramos en la pestaña **Configurations**:
 
 ![build](img/build.png)
 
