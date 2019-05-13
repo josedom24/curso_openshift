@@ -17,7 +17,7 @@ Si borramos un pods, se va a crear inmediatamente otro para que la aplicación s
     prueba-1-b4s25   1/1       Running     0          10s
     prueba-1-build   0/1       Completed   0          18m
 
-## Escabilidad
+## Escalabilidad
 
 En cualquier momento se puede escalar de forma horizontal (crear más pods en un despliegue o eliminarlos) los pods de un despliegue. En todo momento las peticiones a nuestra aplicación se balancean entre los pods que tengamos ejecutando.
 
