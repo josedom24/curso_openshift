@@ -1,6 +1,6 @@
 # OpenShift Online
 
-Para entrar a OpenShift Online accdemos a la URL: [https://manage.openshift.com/](https://manage.openshift.com/).
+Para entrar a OpenShift Online accedemos a la URL: [https://manage.openshift.com/](https://manage.openshift.com/).
 
 Al acceder, podemos escoger entre varios planes, nosotros vamos a utilizar el plan **Starter**, que está pensado para aprender y experimentar con OpenShift:
 
