@@ -44,7 +44,7 @@ A continuación creamos nuestra imagen, desde el directorio donde tenemos el `Do
     Successfully built 518871c9fc0c
     Successfully tagged josedom24/aplicacionweb:v1
 
-Y Por último, podemos comprobar que en nuestro entorno local tenemos la imagen que acabamos de crear:
+Y por último, podemos comprobar que en nuestro entorno local tenemos la imagen que acabamos de crear:
 
     $ docker image ls
     REPOSITORY                TAG                 IMAGE ID            CREATED             SIZE
