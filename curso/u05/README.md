@@ -36,7 +36,7 @@ Qué pasa si nuestro nuestro contenedor falla!!!
 
     $ docker container rm -f some-mysql 
 
-Podemos crear otro contenedor y comprobar como sigue existiendo la BD:
+Podemos crear otro contenedor y comprobar como sigue existiendo la base de datos:
 
     $ docker run --name some-mysql2 -v /opt/mysql:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=asdasd -d mysql
     
