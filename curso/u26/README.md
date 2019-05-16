@@ -60,7 +60,7 @@ Podemos concluir que cada vez que hagamos un nuevo despliegue se creara de nuevo
 
 1. Un fichero `wp-config.php` con la configuración de wordpress con los datos para el acceso a la base de datos:
 
-        $ cp /opt/ficheros
+        $ cd ficheros
         $ oc cp wp-config.php wordpress-2-dsgnr:/opt/app-root/src/wp-content
 
 2. Un fichero `run.sh` que vamos a ejecutar cada vez que hagamos un nuevo despliegue y va a crear un enlace simbólico al fichero de configuración que tenemos guardado: 
