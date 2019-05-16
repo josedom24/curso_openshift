@@ -17,7 +17,7 @@ Ejecutando el comando `minishift` puedes visualizar todos los subcomandos que po
 
 La inicialización del cluster crea una nueva máquina en nuestro virtualbox e instala en ella todas las aplicaciones necesarias para que funcione openshift (la versión que se va a instalar el openshift 3.11), la instrucción que tenemos que ejecutar para que se empiece a construir el cluster es la siguiente (el proceso dura algunos minutos):
 
-    $ minishift start --vm-driver virtaulbox
+    $ minishift start --vm-driver virtualbox
     minishift start       
     -- Starting profile 'minishift'
     ...
